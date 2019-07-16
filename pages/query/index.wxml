@@ -1,0 +1,19 @@
+<view class="page-wrapper">
+    <view class="input-wrapper">
+    <input placeholder="请输入要分类的物品" focus="{{focus}}" bindinput="bindKeyInput"/>
+    <view class="btn-area">
+        <button type="primary" bindtap="bindButtonTap">开始查询</button>
+    </view>
+    </view>
+    <view class="content">
+        <block wx:for="{{products}}" wx:for-index="idx" wx:for-item="itemName">
+            <view class="item" bindtap="toProductPage" data-id="{{itemName.id}}" data-name="{{itemName.name}}" data-type="{{itemName.type}}"> {{itemName.name}} </view>
+        </block>
+    </view>
+    <view class="keywords" wx:if="{{products.length == 0}}">
+        <block wx:for="{{logs}}" wx:for-index="idx" wx:for-item="itemName">
+            <button type="default" size="mini"  bindtap="hot" data-type="{{itemName.type}}">{{itemName.name}}</button>
+        </block>
+    </view>
+</view>
+

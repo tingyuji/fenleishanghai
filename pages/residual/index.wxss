@@ -1,0 +1,30 @@
+.page-wrapper{
+    width: 100%;
+    height: -webkit-fill-available;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+.page-wrapper .title{
+    text-align: left;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    border-bottom: 1px solid #CCEEFF;
+    width: 90%;
+    margin: 0 auto;
+}
+.page-wrapper .desc{
+    text-align: left;
+    border-bottom: 1px solid #CCEEFF;
+    width: 90%;
+    margin: 0 auto;    
+    padding: 10px 1px; 
+}
+.page-wrapper .imgList-li{
+    padding-top: 10px;
+}
+/* 外层组件的宽度可设置成100%或具体数值 */
+.page-wrapper .adContainer {
+    margin-top: 5px;
+    width: 100%;
+  }

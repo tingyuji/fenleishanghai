@@ -1,0 +1,8 @@
+<view class="page-body">  
+  <view class="page-section">
+    <view class="page-section-title">请长按复制到微信中打开</view>
+    <view class="textarea-wrp">
+      <textarea auto-focus="true" style="height: 3em" value="https://mp.weixin.qq.com/s/AI6BRZZ43XicjLsMLpdRpQ"/>
+    </view>
+  </view>
+</view>  

@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/query/index",
+    "pages/blackboard/index",
+    "pages/game/index",
+    "pages/home/index",
+    "pages/myinfo/index",
+    "pages/product/index",
+    "pages/activity/index",
+    "pages/question/index",
+    "pages/hazardous/index",
+    "pages/residual/index",
+    "pages/household/index",
+    "pages/recyclable/index",
+    "pages/result/index",
+    "pages/answer/index",
+    "pages/question2/index",
+    "pages/question3/index",
+    "pages/subject/index",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/logs/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "垃圾分类黑板报",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "selectedIconPath": "images/faxian-shape2.png",
+        "iconPath": "images/faxian-shape.png",
+        "pagePath": "pages/query/index",
+        "text": "查询"
+      },
+      {
+        "selectedIconPath": "images/wode-shape2.png",
+        "iconPath": "images/wode-shape.png",
+        "pagePath": "pages/blackboard/index",
+        "text": "课堂"
+      },
+      {
+        "selectedIconPath": "images/wodeyinyuan2.png",
+        "iconPath": "images/wodeyinyuan.png",
+        "pagePath": "pages/activity/index",
+        "text": "发现"
+      },
+      {
+        "selectedIconPath": "images/wode-shape2.png",
+        "iconPath": "images/wode-shape.png",
+        "pagePath": "pages/home/index",
+        "text": "参与"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

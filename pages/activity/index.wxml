@@ -1,0 +1,5 @@
+<view  class="page-wrapper">
+    <view class="question" bindtap="goQuestion">垃圾分类答题活动1</view>
+    <view class="question2" bindtap="goQuestion2">垃圾分类答题活动2</view>
+    <view class="question3" bindtap="goQuestion3">垃圾分类自测</view>
+</view>>

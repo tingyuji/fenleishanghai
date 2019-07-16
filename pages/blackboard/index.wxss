@@ -1,0 +1,64 @@
+.page-wrapper{
+  width: 100%;
+  height: -webkit-fill-available;
+  background-color: #f8f8f8;
+  text-align: center;
+  padding-top: 5px;
+}
+.page-wrapper .view1{
+  width: 90%;
+  height: 100px;
+  line-height: 100px;
+  vertical-align: middle;
+  background-color: #D1F2EB;
+  margin-top: 2px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+.page-wrapper view{
+  
+}
+.page-wrapper .view2{
+  width: 90%;
+  height: 100px;
+  line-height: 100px;
+  vertical-align: middle;
+  background-color: #F5EEF8;
+  margin-top: 2px;
+  border-radius: 5px;
+  margin: 2px auto;
+}
+
+.page-wrapper .view3{
+  width: 90%;
+  height: 100px;
+  line-height: 100px;
+  vertical-align: middle;
+  background-color: #FCF3CF;
+  margin-top: 2px;
+  border-radius: 5px;
+  margin: 2px auto;
+}
+
+.page-wrapper .view4{
+  width: 90%;
+  height: 100px;
+  line-height: 100px;
+  vertical-align: middle;
+  background-color: #faeaeb;
+  margin-top: 2px;
+  border-radius: 5px;
+  margin: 2px auto;
+}
+
+.page-wrapper .view5{
+  width: 90%;
+  height: 100px;
+  line-height: 100px;
+  vertical-align: middle;
+  background-color: #F5EEF8;
+  margin-top: 2px;
+  border-radius: 5px;
+  margin: 2px auto;
+}
+

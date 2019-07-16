@@ -1,0 +1,20 @@
+<view class="page-wrapper">
+    <view class="input-wrapper">
+    <input bindinput="bindKeyInput" value="{{name}}" focus="{{focus}}" placeholder="物品名称"/>
+    </view>
+    <view class="type-wrapper">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="picker">
+            {{array[index]}}
+            </view>
+        </picker>
+    </view>
+    <view class="btn-area">
+        <button type="primary" bindtap="bindButtonTap">确认提交</button>
+    </view>
+    
+    <view class="content">
+        请提交您认为对的分类，第一行为物品名称，第二行为所选分类，该部分数据平台审核通过后开放，分类数据一经采用，会优先展示您的信息，谢谢参与
+    </view>
+</view>
+

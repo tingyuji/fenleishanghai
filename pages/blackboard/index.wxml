@@ -1,0 +1,17 @@
+<view class='page-wrapper'>
+  <view class='view1' bindtap="go1">
+  湿垃圾
+  </view>
+  <view class='view2' bindtap="go2">
+  干垃圾
+  </view>
+  <view class='view3' bindtap="go3">
+  可回收物
+  </view>
+  <view class='view4' bindtap="go4">
+  有害垃圾
+  </view>
+  <view class='view5' bindtap="go5">
+  铲屎官如何处理
+  </view>
+</view>

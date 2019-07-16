@@ -1,0 +1,16 @@
+<view class="page-wrapper">
+  <view class="button-generate">
+    <button class="share" type="primary" open-type="getUserInfo" bindgetuserinfo="generateImage">生成海报</button>
+  </view>
+
+  <view class='poste_content' id='canvas-container'>
+    <canvas canvas-id="shareImg" style="width:100%;height:{{posterHeight}}px;"></canvas>
+  </view>
+
+  <view class="button-save">
+    <button class="share" type="primary" bindtap="saveImage">保存海报</button>
+  </view>  
+  <view class="button-save">
+    <button class="share" type="primary" bindtap="viewAnswer">查看答案</button>
+  </view>  
+</view>
