@@ -19,39 +19,55 @@
     "pages/subject/index",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/logs/index"
+    "pages/logs/index",
+    "pages/authorize/index",
+    "pages/attend/index",
+    "pages/sponsor/index",
+    "pages/friend/index",
+    "pages/empty/index",
+    "pages/info/index",
+    "pages/answer1/index",
+    "pages/answer2/index",
+    "pages/question1/index",
+    "pages/answer3/index",
+    "pages/record/index",
+    "pages/challenge/index",
+    "pages/rank/index",
+    "pages/rule/index",
+    "pages/benchmark/index",
+    "pages/generate/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#07c160",
     "navigationBarTitleText": "垃圾分类黑板报",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "list": [
       {
-        "selectedIconPath": "images/faxian-shape2.png",
-        "iconPath": "images/faxian-shape.png",
+        "selectedIconPath": "icons/tree2017072704.png",
+        "iconPath": "icons/tree2017072704-2.png",
         "pagePath": "pages/query/index",
         "text": "查询"
       },
       {
-        "selectedIconPath": "images/wode-shape2.png",
-        "iconPath": "images/wode-shape.png",
+        "selectedIconPath": "icons/tree2017072701.png",
+        "iconPath": "icons/tree2017072701-2.png",
         "pagePath": "pages/blackboard/index",
-        "text": "课堂"
+        "text": "科普"
       },
       {
-        "selectedIconPath": "images/wodeyinyuan2.png",
-        "iconPath": "images/wodeyinyuan.png",
+        "selectedIconPath": "icons/tree2017072702.png",
+        "iconPath": "icons/tree2017072702-2.png",
         "pagePath": "pages/activity/index",
         "text": "发现"
       },
       {
-        "selectedIconPath": "images/wode-shape2.png",
-        "iconPath": "images/wode-shape.png",
-        "pagePath": "pages/home/index",
-        "text": "参与"
+        "selectedIconPath": "icons/tree2017072703.png",
+        "iconPath": "icons/tree2017072703-2.png",
+        "pagePath": "pages/info/index",
+        "text": "关于"
       }
     ]
   },

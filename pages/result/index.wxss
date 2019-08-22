@@ -11,5 +11,8 @@
 }
 .poste_content{
     margin: 5px;
-    border: 1px solid #f80;
+    border: 1px solid #179B16;
+}
+.button-share{
+    margin: 5px;
 }

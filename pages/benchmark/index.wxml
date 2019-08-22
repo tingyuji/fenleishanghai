@@ -1,0 +1,16 @@
+<view class="page-benchmark">
+    <view class="title">您本次挑战得分为：{{score}}</view>
+    <view class="items">
+        <block wx:for="{{products}}" wx:for-index="idx" wx:for-item="product">
+            <view class="someproduct">
+                <view class="image"><image style="width:32px;height:32px; background-color: #eeeeee;" mode="scaleToFill" src="{{'https://www.xiaomutong.com.cn/public/question/'+product.image}}"></image></view>
+                <view class="title">{{product.name}}-{{types[rights[idx]-1]}}</view>
+                <view class="flag">{{answers[idx] == 1 ? '✅' : '❎'}}</view>
+            </view>       
+        </block>
+    </view>
+    <view class="adContainer">
+    <ad unit-id="adunit-c2394e910b7359b6"></ad>
+    </view>
+
+</view>

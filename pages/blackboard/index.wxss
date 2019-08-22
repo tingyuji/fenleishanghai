@@ -1,64 +1,77 @@
 .page-wrapper{
   width: 100%;
-  height: -webkit-fill-available;
-  background-color: #f8f8f8;
+  height: 100%;
+  background-color: #f0f0f0;
   text-align: center;
   padding-top: 5px;
+  padding-bottom: 10px;
 }
 .page-wrapper .view1{
   width: 90%;
-  height: 100px;
-  line-height: 100px;
-  vertical-align: middle;
-  background-color: #D1F2EB;
-  margin-top: 2px;
+  height: 250px;
+  background-color: #fff;
   border-radius: 5px;
-  margin: 0 auto;
+  margin: 10px auto 0;
+}
+.page-wrapper .view1 image{
+  height: 160px;
+}
+.page-wrapper .view1 .title{
+  height: 50px;
+  line-height: 50px;
+  vertical-align: middle;
 }
 .page-wrapper view{
-  
+  text-align:left;
 }
 .page-wrapper .view2{
   width: 90%;
-  height: 100px;
-  line-height: 100px;
-  vertical-align: middle;
-  background-color: #F5EEF8;
-  margin-top: 2px;
+  height: 250px;
+  background-color: #fff;
   border-radius: 5px;
-  margin: 2px auto;
+  margin: 10px auto 0;
 }
 
+.page-wrapper .view2 image{
+  height: 160px;
+}
+.page-wrapper .view2 .title{
+  height: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+}
 .page-wrapper .view3{
   width: 90%;
-  height: 100px;
-  line-height: 100px;
-  vertical-align: middle;
-  background-color: #FCF3CF;
-  margin-top: 2px;
+  height: 250px;
+  background-color: #fff;
   border-radius: 5px;
-  margin: 2px auto;
+  margin: 10px auto 0;
 }
-
+.page-wrapper .view3 image{
+  height: 160px;
+}
+.page-wrapper .view3 .title{
+  height: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+}
 .page-wrapper .view4{
   width: 90%;
-  height: 100px;
-  line-height: 100px;
-  vertical-align: middle;
-  background-color: #faeaeb;
-  margin-top: 2px;
+  height: 250px;
+  background-color: #fff;
   border-radius: 5px;
-  margin: 2px auto;
+  margin: 10px auto 10px;
 }
-
-.page-wrapper .view5{
-  width: 90%;
-  height: 100px;
-  line-height: 100px;
+.page-wrapper .view4 image{
+  height: 160px;
+}
+.page-wrapper .view4 .title{
+  height: 50px;
+  line-height: 50px;
   vertical-align: middle;
-  background-color: #F5EEF8;
-  margin-top: 2px;
-  border-radius: 5px;
-  margin: 2px auto;
 }
-
+/* 外层组件的宽度可设置成100%或具体数值 */
+.page-wrapper .adContainer { 
+    margin-top: 5px;
+    width: 100%;
+}

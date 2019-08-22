@@ -1,6 +1,8 @@
 <view class="page-wrapper">
-  <view class="title">干垃圾</view>
-  <view class="desc">是指除有害垃圾、可回收物、湿垃圾意外的其他生活废弃物。</view>
+  <view class="home" bindtap="goHome">首页</view>
+  <view class="share" bindtap="goShare"><button open-type="share">分享</button></view>
+  <view class="title">{{name}}属于干垃圾</view>
+  <view class="desc">是指除有害垃圾、可回收物、湿垃圾以外的其他生活废弃物。</view>
   <view class='imgList-li' wx:for='{{imgArr}}'>
     <image class='paycode' src='{{item}}' data-index='{{index}}' bindtap='previewImg'></image>
   </view>

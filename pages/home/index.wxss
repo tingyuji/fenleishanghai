@@ -30,7 +30,12 @@ input{
     line-height: 50px;
     vertical-align: middle;
     background-color: #fff;
+    color: #585858;
 }
+.picker{
+    color: #585858;
+}
+
 .content{
     border:1px solid#07c160;
     height: 250px;

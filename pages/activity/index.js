@@ -74,6 +74,17 @@ Page({
       }
     })
   },
+  goQuestion1: function(){
+    wx.navigateTo({
+      url: '/pages/question1/index',
+      success: res => {
+        console.log(res);
+      },
+      fail: err => {
+        console.log(err);
+      }
+    })
+  },
   goQuestion2: function(){
     wx.navigateTo({
       url: '/pages/question2/index',

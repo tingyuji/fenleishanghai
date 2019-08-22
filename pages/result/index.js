@@ -35,13 +35,30 @@ Page({
     })
   },
   viewAnswer: function(){
-    wx.navigateTo({
-      url: '/pages/answer/index',
-      success: res => {
-        console.log(res);
-      },
-      fail: err => {
-        console.log(err);
+    wx.getStorage({
+      key: 'index',
+      success (res) {
+        console.log(res.data)
+        if(res.data == '000'){
+          wx.navigateTo({
+            url: '/pages/answer/index'
+          })
+        }
+        if(res.data == '001'){
+          wx.navigateTo({
+            url: '/pages/answer1/index'
+          })
+        }
+        if(res.data == '002'){
+          wx.navigateTo({
+            url: '/pages/answer2/index'
+          })
+        }
+        if(res.data == '003'){
+          wx.navigateTo({
+            url: '/pages/answer3/index'
+          })
+        }
       }
     })
   },
@@ -53,7 +70,7 @@ Page({
     const bdImagePath = '../../static/images/common/'
     return new Promise(function (resolve, reject) {
       wx.getImageInfo({
-        src: bdImagePath + "base.png",
+        src: bdImagePath + "base20190818.png",
         success: function (res) {
           console.log('promiseBdImg', res)
           resolve(res);
@@ -78,12 +95,25 @@ Page({
       ctx.height = posterHeight
       console.log(windowWidth, posterHeight)
       //主要就是计算好各个图文的位置
+
       ctx.drawImage('../../' + res.path, 0, 0, windowWidth, posterHeight, 0, 0)
       ctx.save() // 对当前区域保存
-      ctx.draw()
+      ctx.draw(true)
+
+      ctx.setFillStyle('#fff')
+      ctx.fillRect(10, 10, windowWidth-20, posterHeight-20)
+      ctx.restore() // 恢复
+      ctx.save()
+      ctx.draw(true)
+
+      ctx.setFillStyle('#f0f0f0')
+      ctx.fillRect(10, 110, windowWidth-20, 30)
+      ctx.restore() // 恢复
+      ctx.save()
+      ctx.draw(true)
 
     }).then( () => {
-    
+      _this.generateImage();
     })    
   },
   downLoadFile: function(file){
@@ -122,13 +152,13 @@ Page({
     })
   },
   generateImage: function(e){
-    app.globalData.userInfo = e.detail.userInfo
-    let userInfo = e.detail.userInfo
+    // app.globalData.userInfo = e.detail.userInfo
+    let userInfo = app.globalData.userInfo
     console.log('userInfo', userInfo)
     // 更新用户信息
     // api.post('更新用户信息的url', userInfo)
     this.setData({
-      userInfo: e.detail.userInfo
+      userInfo: app.globalData.userInfo
     });
 
     console.log('2019062006');
@@ -188,7 +218,7 @@ Page({
       console.log(windowWidth, posterHeight)
       //主要就是计算好各个图文的位置
       
-      ctx.drawImage(res[0].path,148, 10, 75, 75, 0, 0) // 把图片填充进裁剪的圆形
+      ctx.drawImage(res[0].path,20, 20, 75, 75, 0, 0) // 把图片填充进裁剪的圆形
       ctx.restore() // 恢复
       ctx.save()
       
@@ -200,10 +230,17 @@ Page({
       ctx.beginPath();
       ctx.setTextAlign('center')
       ctx.setFillStyle('#000')
+      ctx.setFontSize(18) 
+      ctx.fillText(nickName, 125, 65)
+      ctx.stroke()
+
+      ctx.beginPath();
+      ctx.setTextAlign('center')
+      ctx.setFillStyle('#000')
       ctx.setFontSize(22)      
       ctx.fillText('得分'+_this.data.score, 180, 250)
       ctx.setFontSize(18) 
-      ctx.fillText('欢迎'+ nickName +'参加垃圾分类答题活动', 180, 414)
+      ctx.fillText('欢迎参加垃圾分类答题活动', 180, 414)
       ctx.stroke()
       ctx.draw(true)
 
@@ -242,7 +279,20 @@ Page({
       })
     }).then(res => {
       console.log(res)
-      this.save(res)
+      // this.save(res)
+      //点击图片进行预览，长按保存分享图片
+
+      var img = res.tempFilePath
+      
+      console.log(res)
+      
+      wx.previewImage({
+      
+        current: img, // 当前显示图片的http链接
+        
+        urls: [img] // 需要预览的图片http链接列表
+      
+      })
     })
   },
   save: function(data){
@@ -318,5 +368,29 @@ Page({
         }
       }
     })
+  },
+  onShareAppMessage: function (res) {
+    //if (res.from === 'button') {
+      // 来自页面内转发按钮
+      //console.log(res.target)
+    //}
+    return {
+      title: '垃圾分类答题自测',
+      path: '/pages/activity/index',
+      imageUrl: '/images/defaultHeader.jpg',
+      success: function (res) {
+        // 转发成功
+        console.log('转发成功')
+        wx.showToast({
+          title: '转发成功',
+          icon: 'success',
+          duration: 2000
+        })
+
+      },
+      fail: function (res) {
+        // 转发失败
+      }
+    }
   }
 })

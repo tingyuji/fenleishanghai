@@ -1,17 +1,31 @@
 <view class='page-wrapper'>
   <view class='view1' bindtap="go1">
-  湿垃圾
+    <view>
+    <image mode="scaleToFill"	src="https://www.xiaomutong.com.cn/public/subject/Snipaste_2019-07-25_22-10-08.png" style="width:100%; background-color: #eeeeee;" role="img"></image>
+    </view>
+    <view class="title">什么是湿垃圾?</view>
   </view>
   <view class='view2' bindtap="go2">
-  干垃圾
+    <view>
+    <image mode="scaleToFill" src="https://www.xiaomutong.com.cn/uploads/tmp_070110c71f15767eccaa06d111e2c373.jpg" style="width:100%; background-color: #eeeeee;" role="img"></image>
+    </view>
+    <view class="title">什么是干垃圾?</view>
   </view>
   <view class='view3' bindtap="go3">
-  可回收物
+    <view>
+    <image mode="scaleToFill" src="https://www.xiaomutong.com.cn/public/subject/Snipaste_2019-07-25_22-10-08.png" style="width:100%; background-color: #eeeeee;" role="img"></image>
+    </view>
+    <view class="title">什么是可回收物?</view>
   </view>
   <view class='view4' bindtap="go4">
-  有害垃圾
+    <view>
+    <image mode="scaleToFill" src="https://www.xiaomutong.com.cn/uploads/tmp_070110c71f15767eccaa06d111e2c373.jpg" style="width:100%; background-color: #eeeeee;" role="img"></image>
+    </view>
+    <view class="title">什么是有害垃圾?</view>
   </view>
-  <view class='view5' bindtap="go5">
-  铲屎官如何处理
+  <view class="adContainer">
+  <ad unit-id="adunit-ecdf075ac20d0754"></ad>
   </view>
+  
+
 </view>

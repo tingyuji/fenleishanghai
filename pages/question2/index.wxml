@@ -1,13 +1,22 @@
 <view class="page-wrapper">
     <view class="question">
+        <view class="sortcode">{{sortcode}}/10</view>
         <view class="product">
             <image style="" src="{{image}}"></image>
         </view>
         <view class="options">
-             <image style="" src="/icons/icon1.png"></image>
-             <image style="" src="/icons/icon2.png"></image>
-             <image style="" src="/icons/icon3.png"></image>
-             <image style="" src="/icons/icon4.png"></image>
+            <view class="optionimage" bindtap="bindCheck1">
+                <image style="" src="/icons/icon1.png"></image>
+            </view>
+            <view class="optionimage" bindtap="bindCheck2">
+                <image style="" src="/icons/icon2.png"></image>
+            </view>
+            <view class="optionimage" bindtap="bindCheck3">
+                <image style="" src="/icons/icon3.png"></image>
+            </view>
+            <view class="optionimage" bindtap="bindCheck4">
+                <image style="" src="/icons/icon4.png"></image>
+            </view>
         </view>
         <view class="actons">
             <radio-group class="radio-group" bindchange="radioChange">

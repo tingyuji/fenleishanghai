@@ -53,15 +53,18 @@ Page({
       inputValue: e.detail.value
     })
   },  
-  bindButtonTap: function() {
+  bindClear: function(){
+    console.log('clear')
     this.setData({
-      focus: true
+      inputValue: '',
+      products: []
     })
+  },
+  bindButtonTap: function() {
     if(this.data.inputValue==''){
-      wx.showToast({
-        title: '请先输入',
-        icon: 'success',
-        duration: 2000
+      this.setData({
+        inputValue: '',
+        products: []
       })
       return;
     }
@@ -86,23 +89,60 @@ Page({
           _this.setData({
             products: []
           })
-          wx.showModal({
-            showCancel: false,
-            title: '温馨提醒',
-            content: '您查询的物品尚未收录，小编正在快马加鞭',
-            success (res) {
-              if (res.confirm) {
-
-              } else if (res.cancel) {
-
-              }
+          wx.navigateTo({
+            url: '/pages/empty/index',
+            success: res => {
+              console.log(res);
+            },
+            fail: err => {
+              console.log(err);
             }
           })
         }
       }
     })
-  }, 
-
+  },
+  bindRule: function(){
+    wx.navigateTo({
+      url: '/pages/rule/index'
+    })
+  },
+  bindRank: function(){
+    wx.navigateTo({
+      url: '/pages/rank/index'
+    })
+  },  
+  bindChallenge: function(){
+    let _this = this;
+    // 查看是否授权
+    wx.getSetting({
+      success (res){
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+          wx.getUserInfo({
+            success: function(res) {
+              console.log(res.userInfo)
+              let userinfo = JSON.stringify(res.userInfo)
+              wx.navigateTo({
+                url: '/pages/challenge/index?userinfo='+userinfo,
+                success: res => {
+                  console.log(res);
+                },
+                fail: err => {
+                  console.log(err);
+                }
+              })
+            }
+          })
+        }else{
+          let url = '/pages/authorize/index?action=1';
+          wx.navigateTo({
+            url: url
+          })
+        }
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -160,16 +200,16 @@ Page({
     let url = '/pages/product/index?id='+id;
     switch(type) {
       case '干垃圾':
-        url = '/pages/residual/index';
+        url = '/pages/residual/index?id='+id;
          break;
       case '湿垃圾':
-        url = '/pages/household/index';
+        url = '/pages/household/index?id='+id;
          break;
       case '可回收物':
-        url = '/pages/recyclable/index';
+        url = '/pages/recyclable/index?id='+id;
         break;  
       case '有害垃圾':
-        url = '/pages/hazardous/index';
+        url = '/pages/hazardous/index?id='+id;
         break;                 
       default:
          
